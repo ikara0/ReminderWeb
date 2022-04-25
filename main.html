@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Do Not Forget</title>
+    <link rel="stylesheet" href="css/main.css">
+
+</head>
+
+<body>
+    <div>
+        <div class="header">
+            <div class="logo">
+                <img src="img/logo.jpg" alt="Reminder">
+            </div>
+
+            <div class="phrase">
+                <h2>To-Do Uygulaması</h2>
+                <marquee>Don't forget those who forget never forget those who forget</marquee>
+            </div>
+            <div class="timer">
+                <div id="basicDigitalDate" class="clock" onload="displayClock()"></div>
+                <div id="basicDigitalClock" class="date"></div>
+                <script src="js/jsMain.js"></script>
+            </div>
+        </div>
+        <div class="container">
+            <div class="selektor">
+                <label class="lblInput" for="txtInput">Task</label>
+                <textarea class="textHolder" name="name" id="txtInput" rows="5" placeholder="Do Not Forget!"></textarea>
+                <hr>
+                <input type="radio" id="highRb" name="fav_language" value="H">
+                <label class="highRb" for="html">High</label><br><br>
+                <input type="radio" id="midRb" name="fav_language" value="M">
+                <label class="midRb" for="html">Middle</label><br><br>
+                <input type="radio" id="lowRb" name="fav_language" value="L">
+                <label class="lowRb" for="html">Low</label><br>
+                <hr>
+                <button onclick="addNewNote()" type="button">Add</button>
+            </div>
+            <div class="toDo">
+                <label class="lblInput">To-Do</label>
+                <ul id="toDo"></ul>
+            </div>
+            <div class="inProgress">
+                <label class="lblInput">In Progress</label>
+                <ul id="inProgress"></ul>
+            </div>
+            <div class="completed">
+                <label class="lblInput">Completed</label>
+                <ul id="completed"></ul>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
