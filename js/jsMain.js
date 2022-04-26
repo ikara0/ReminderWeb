@@ -35,24 +35,3 @@ function displayClock() {
 }
 
 displayClock();
-
-function addNewNote() {
-    var x = "";
-    rdbHigh = document.getElementById("highRb");
-    rdbMid = document.getElementById("midRb");
-    rdbLow = document.getElementById("lowRb");
-    if (rdbHigh.checked) {
-        x = rdbHigh.value
-    }
-    else if (rdbMid.checked) { x = rdbMid.value }
-    else if (rdbLow.checked) { x = rdbLow.value }
-    else { alert("Do not empty!"); return; }
-
-    var li = document.createElement("li");
-    var input = document.getElementById("txtInput").value;
-    var a = document.createTextNode(input + "--" + x);
-    li.appendChild(a);
-    if (input === '') { alert("Do not empty!"); }
-    else { document.getElementById("toDo").appendChild(li); }
-    document.getElementById("txtInput").value = "";
-}

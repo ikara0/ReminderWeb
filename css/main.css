@@ -1,6 +1,10 @@
 /* body {
     display: flex;
 } */
+body {
+    background-color: #dae6ed;
+    font-family: 'Dancing Script', cursive;
+}
 
 .header {
     display: flex;
@@ -9,6 +13,7 @@
     border: 2px solid rgb(0, 0, 0);
     margin: 10px;
     border-radius: 5px;
+    background-color: #345d76;
 }
 
 .logo {
@@ -18,6 +23,7 @@
 .logo img {
     width: 150px;
     height: 100px;
+    border-radius: 5px;
 }
 
 .timer {
@@ -60,15 +66,13 @@
     border: 2px solid rgb(0, 0, 0);
     border-radius: 5px;
     margin: 10px;
-    /* position: absolute; */
-    background-color: rgb(192, 232, 34);
-    opacity: 0.8;
-    /* display: flex; */
+    background-color: #FDC664;
+    /* opacity: 0.8; */
 
 }
 
 .selektor:hover {
-    box-shadow: 2px 1px 1px rgb(69, 179, 10);
+    box-shadow: 2px 1px 1px #eb5813
 }
 
 .lblInput {
@@ -83,32 +87,30 @@
     border-radius: 5px;
     resize: none;
     overflow: hidden;
+    background-color: #b4c0c7;
 }
 
 .highRb {
-    background-color: white;
     border: 2px solid red;
     border-radius: 5px;
-    background-color: red;
+    background-color: rgb(174, 59, 59);
     color: white;
     opacity: 0.9;
 }
 
 .midRb {
-    background-color: white;
     border: 2px solid blue;
     border-radius: 5px;
-    background-color: blue;
+    background-color: rgb(71, 71, 204);
     color: white;
     opacity: 0.9;
 }
 
 .lowRb {
 
-    background-color: white;
     border: 2px solid rgb(225, 156, 7);
     border-radius: 5px;
-    background-color: rgb(225, 112, 7);
+    background-color: rgb(240, 154, 41);
     color: white;
     opacity: 0.9;
 }
@@ -134,11 +136,19 @@
     border: 2px solid rgb(0, 0, 0);
     border-radius: 5px;
     margin: 10px;
-    /* position: absolute; */
-    background-color: rgb(105, 180, 36);
-    opacity: 0.8;
-    /* display: flex; */
+    background-color: #FD836D;
+    overflow: scroll;
+
 }
+
+.toDo::-webkit-scrollbar {
+    display: none;
+}
+
+.toDo:hover {
+    box-shadow: 2px 1px 1px #eb5813
+}
+
 
 .inProgress {
     width: 200px;
@@ -146,10 +156,16 @@
     border: 2px solid rgb(0, 0, 0);
     border-radius: 5px;
     margin: 10px;
-    /* position: absolute; */
-    background-color: rgb(105, 180, 36);
-    opacity: 0.8;
-    /* display: flex; */
+    background-color: #73607D;
+    overflow: scroll;
+}
+
+.inProgress::-webkit-scrollbar {
+    display: none;
+}
+
+.inProgress:hover {
+    box-shadow: 2px 1px 1px #eb5813;
 }
 
 .completed {
@@ -158,8 +174,33 @@
     border: 2px solid rgb(0, 0, 0);
     border-radius: 5px;
     margin: 10px;
-    /* position: absolute; */
-    background-color: rgb(105, 180, 36);
-    opacity: 0.8;
-    /* display: flex; */
+    background-color: #C1b9Ae;
+    overflow: scroll;
+}
+
+.completed::-webkit-scrollbar {
+    display: none;
+}
+
+.completed:hover {
+    box-shadow: 2px 1px 1px #eb5813
+}
+
+ul li {
+    border: 1px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+    padding: 5px 3px 5px 20px;
+    background-color: #c1c4c5;
+    transition: 0.2s;
+}
+
+ul li:hover {
+    background-color: #e9e7e4
+}
+
+ul li.checked {
+    background-color: #fff;
+    color: #64ce53;
 }
