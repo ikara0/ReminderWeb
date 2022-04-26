@@ -3,7 +3,9 @@
 } */
 body {
     background-color: #dae6ed;
-    font-family: 'Dancing Script', cursive;
+    font-family: 'Tapestry', cursive;
+    transition: 0.2s;
+
 }
 
 .header {
@@ -24,6 +26,17 @@ body {
     width: 150px;
     height: 100px;
     border-radius: 5px;
+}
+
+.logo img:hover {
+    animation: pulsate 1s ease-in-out;
+}
+
+@keyframes pulsate {
+    0% {
+        box-shadow: 0px 0px 25px rgb(160, 10, 10),
+            0px 0px 50px rgba(242, 69, 26, 0.5);
+    }
 }
 
 .timer {
@@ -54,6 +67,7 @@ body {
 .container {
     display: flex;
     justify-content: space-between;
+    position: relative;
 }
 
 .phrase {
@@ -87,7 +101,7 @@ body {
     border-radius: 5px;
     resize: none;
     overflow: hidden;
-    background-color: #b4c0c7;
+    background-color: #ffffff;
 }
 
 .highRb {
@@ -115,15 +129,27 @@ body {
     opacity: 0.9;
 }
 
+#submit {
+    font-size: .96em;
+    height: 25px;
+    width: 70px;
+    background-color: #e6683e;
+    color: white;
+    border-radius: 10px;
+    opacity: 0.8;
+}
+
+#submit:hover {
+    border: 1px solid rgb(159, 9, 9);
+    box-shadow: 2px 1px rgb(160, 10, 10);
+}
 
 .selektor button {
     font-size: medium;
     margin-left: 70px;
     background-color: rgb(211, 187, 184);
     border-radius: 5px;
-    font-size: larger;
     font-weight: bold;
-
 }
 
 .selektor button:hover {
@@ -194,13 +220,77 @@ ul li {
     padding: 5px 3px 5px 20px;
     background-color: #c1c4c5;
     transition: 0.2s;
+    /* list-style: none; */
 }
 
 ul li:hover {
     background-color: #e9e7e4
 }
 
-ul li.checked {
-    background-color: #fff;
-    color: #64ce53;
+.toDo li {
+    text-decoration: dashed;
+
+}
+
+.completed li {
+    text-decoration: line-through;
+    background-color: #1e7e21;
+}
+
+.completed li::before {
+    content: '✓';
+}
+
+.inProgress li {
+    text-decoration: underline;
+    background-color: #87bb34;
+}
+
+.container b {
+    position: absolute;
+    bottom: 0px;
+    text-align: center;
+}
+
+.footer {
+    display: flex;
+    background-color: #092E49;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 50px;
+    padding: 10px;
+    justify-content: space-between;
+    align-items: center;
+    text-decoration: none;
+    position: fixed;
+}
+
+.footer a {
+    text-decoration: none;
+    color: white;
+}
+
+
+.footer .social a {
+    padding: 10px;
+    width: 30px;
+    text-align: center;
+    border-radius: 5px;
+    background-color: aliceblue;
+    text-decoration: none;
+    color: #0f4b76;
+}
+
+.footer span {
+    color: white;
+    font-weight: bold;
+}
+
+.footer span a {
+    color: rgb(248, 119, 6);
+}
+
+.footer .social a:hover {
+    background-color: rgb(242, 122, 26);
 }

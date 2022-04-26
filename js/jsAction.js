@@ -17,24 +17,49 @@ compList.addEventListener('click', function (z) {
     document.getElementById('completed').appendChild(text);
 }, false);
 
+var reverseListComp = document.querySelector('#completed');
+reverseListComp.addEventListener('contextmenu', function (ev) {
+    ev.preventDefault();
+    var text = ev.target;
+    document.getElementById('inProgress').appendChild(text);
+}, false);
+
+var reverseListInProg = document.querySelector('#inProgress');
+reverseListInProg.addEventListener('contextmenu', function (ev) {
+    ev.preventDefault();
+    var text = ev.target;
+    document.getElementById('toDo').appendChild(text);
+}, false);
+
+var reverseListToDo = document.querySelector('#toDo');
+reverseListToDo.addEventListener('contextmenu', function (ev) {
+    ev.preventDefault();
+    var text = ev.target;
+    document.getElementById('toDo').removeChild(text);
+}, false);
+
 function addNewNote() {
-    var x = "";
+    var x;
     rdbHigh = document.getElementById("highRb");
     rdbMid = document.getElementById("midRb");
     rdbLow = document.getElementById("lowRb");
+    var li = document.createElement("li");
     if (rdbHigh.checked) {
-        x = rdbHigh.value
+        x = rdbHigh.value;
     }
     else if (rdbMid.checked) { x = rdbMid.value }
     else if (rdbLow.checked) { x = rdbLow.value }
     else { alert("Do not empty!"); return; }
 
-    var li = document.createElement("li");
+
     var input = document.getElementById("txtInput").value;
     var a = document.createTextNode(input + "--" + x);
     li.appendChild(a);
     if (input === '') { alert("Do not empty!"); }
 
-    else { document.getElementById("toDo").appendChild(li); }
+    else {
+        document.getElementById("toDo").appendChild(li);
+
+    }
     document.getElementById("txtInput").value = "";
 }

@@ -7,8 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Do Not Forget</title>
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Tapestry&display=swap');
     </style>
 </head>
 
@@ -41,7 +42,7 @@
                 <input type="radio" id="lowRb" name="fav_language" value="L">
                 <label class="lowRb" for="html">Low</label><br>
                 <hr>
-                <button onclick="addNewNote()" type="button">Add</button>
+                <button id="submit" onclick="addNewNote()" type="button">Add</button>
             </div>
             <div class="toDo">
                 <label class="lblInput">To-Do</label>
@@ -54,6 +55,19 @@
             <div class="completed">
                 <label class="lblInput">Completed</label>
                 <ul id="completed"></ul>
+            </div>
+
+        </div>
+        <div>
+            <marquee>Rigth Click On Item To Undo!</marquee>
+        </div>
+        <div class="footer">
+            <span>Copyright © 2022 Reminder</span>
+            <span>Powered By <a href="mailto:i.kara.001@outlook.com">Ismail Kara</a></span>
+            <div class="social">
+                <a href="https://www.twitter.com/ikaraa_" class="uil uil-twitter"></a>
+                <a href="https://www.linkedin.com/in/ikara0/" class="uil uil-linkedin"></a>
+                <a href="https://www.instagram.com/i.kara_/" class="uil uil-instagram" target="blank"></a>
             </div>
         </div>
     </div>
