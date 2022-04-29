@@ -53,12 +53,21 @@ function addNewNote() {
 
 
     var input = document.getElementById("txtInput").value;
-    var a = document.createTextNode(input + "--" + x);
+    var a = document.createTextNode(input);
     li.appendChild(a);
     if (input === '') { alert("Do not empty!"); }
 
     else {
-        document.getElementById("toDo").appendChild(li);
+        let item = document.getElementById("toDo").appendChild(li);
+        if (rdbHigh.checked) {
+            item.style.backgroundColor = "#AE3B3B";
+        }
+        else if (rdbMid.checked) {
+            item.style.backgroundColor = "#4747CC";
+        }
+        else {
+            item.style.backgroundColor = "#F09A29";
+        }
 
     }
     document.getElementById("txtInput").value = "";
